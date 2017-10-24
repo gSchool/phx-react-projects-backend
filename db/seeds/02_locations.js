@@ -1,13 +1,13 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('locations').del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('locations').insert([
+        {name: 'Das Auto Sales', address: '123 Main St.'},
+        {name: 'Blahaha Motor Cars', address: '4602 E Blahbe Lane'},
+        {name: 'Clockinfrontame Autos', address: '6200 N Sonoma Beach Rd.'}
       ]);
     });
 };

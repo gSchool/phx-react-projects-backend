@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
     table.string('model');
     table.integer('miles');
     table.integer('price');
-    table.string('photo_url');
+    table.string('photo_url').defaultsTo('https://dutcheauction.com/images/default-car.png');
   });
 };
 

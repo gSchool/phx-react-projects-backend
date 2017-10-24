@@ -1,13 +1,13 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('books').del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('books').insert([
+        { title: 1, author: 'rowValue1', pages: 55 },
+        { title: 2, author: 'rowValue2', pages: 55 },
+        { title: 3, author: 'rowValue3', pages: 55 }
       ]);
     });
 };
