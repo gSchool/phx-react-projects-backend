@@ -6,9 +6,6 @@ var cors = require('cors');
 var logger = require('morgan');
 var knex = require('./db/knex');
 
-var index = require('./routes/indexRoutes');
-var todos = require('./routes/todosRoutes');
-
 var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -19,9 +16,13 @@ app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/', index);
-app.use('/todos', todos);
+app.use('/', require('./routes/indexRoutes'));
+app.use('/books', require('./routes/booksRoutes'));
+app.use('/cars', require('./routes/carsRoutes'));
+app.use('/comments', require('./routes/commentsRoutes'));
+app.use('/locations', require('./routes/locationsRoutes'));
+app.use('/posts', require('./routes/postsRoutes'));
 
 app.listen(port, function() {
-console.log("listening on port: ", port);
+    console.log("listening on port: ", port);
 })
