@@ -24,5 +24,5 @@ app.use('/locations', require('./routes/locationsRoutes'));
 app.use('/posts', require('./routes/postsRoutes'));
 
 app.listen(port, function() {
-    console.log("listening on port: ", port);
+	console.log("listening on port: ", port);
 })
