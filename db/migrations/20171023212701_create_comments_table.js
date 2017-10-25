@@ -2,6 +2,7 @@ exports.up = function (knex, Promise) {
   return knex.schema.createTable('comments', function (table) {
     table.increments();
     table.string('content');
+    table.string('author');
     table.integer('post_id').references('id').inTable('posts').onDelete('CASCADE').nullable();
   });
 };
