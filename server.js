@@ -18,11 +18,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'))
 
 app.use('/', require('./routes/indexRoutes'));
+
+// Bookshelf Routes
 app.use('/books', require('./routes/booksRoutes'));
+
+// Vehicle Comparison Tool Routes
 app.use('/cars', require('./routes/carsRoutes'));
-app.use('/comments', require('./routes/commentsRoutes'));
 app.use('/locations', require('./routes/locationsRoutes'));
+
+// Reddit Clone Routes
 app.use('/posts', require('./routes/postsRoutes'));
+app.use('/comments', require('./routes/commentsRoutes'));
 
 app.listen(port, function() {
 	console.log("listening on port: ", port);
