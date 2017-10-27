@@ -30,6 +30,13 @@ app.use('/locations', require('./routes/locationsRoutes'));
 app.use('/posts', require('./routes/postsRoutes'));
 app.use('/comments', require('./routes/commentsRoutes'));
 
+// React Inbox Routes
+app.use('/messages', require('./routes/messagesRoutes'));
+
+// Shopping Cart Routes
+app.use('/products', require('./routes/productsRoutes'));
+app.use('/items', require('./routes/itemsRoutes'));
+
 app.listen(port, function() {
 	console.log("listening on port: ", port);
 })
