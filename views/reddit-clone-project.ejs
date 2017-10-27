@@ -1,0 +1,180 @@
+<h1>Reddit Clone Routes</h1>
+<h2>Posts</h2>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>METHOD</th>
+      <th>URL</th>
+      <th>EXPECTED REQUEST</th>
+      <th>EXPECTED RESPONSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET (all posts)</td>
+      <td>/posts</td>
+      <td></td>
+      <td>[{
+            "id": 1,
+            "author": "Molina Fulton",
+            "title": "Deserunt nulla ipsum ea occaecat commodo aliqua nostrud proident pariatur.",
+            "content": "Ut quis proident ipsum ipsum fugiat reprehenderit esse ut. Aliqua est tempor ipsum exercitation quis nostrud sit adipisicing mollit magna duis Lorem. Ut et proident voluptate aute voluptate voluptate anim irure et Lorem culpa non voluptate. Aliqua ea ullamco nostrud id quis officia in eiusmod eiusmod labore aliqua quis duis ad. Elit et elit sunt exercitation sunt nisi incididunt amet amet. Pariatur nulla eiusmod minim fugiat commodo id enim duis occaecat.\r\n",
+            "votes": 0,
+            "created_at": "2017-10-27T15:11:18.883Z",
+            "image_url": "http://store-nz.monsroyale.com/c.3934103/app-nz/img/no_image_available.jpeg$1resizeid=3&resizeh=1000&resizew=1000"
+        }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>GET (one post)</td>
+      <td>/posts/1</td>
+      <td></td>
+      <td>[{
+            "id": 1,
+            "author": "Molina Fulton",
+            "title": "Deserunt nulla ipsum ea occaecat commodo aliqua nostrud proident pariatur.",
+            "content": "Ut quis proident ipsum ipsum fugiat reprehenderit esse ut. Aliqua est tempor ipsum exercitation quis nostrud sit adipisicing mollit magna duis Lorem. Ut et proident voluptate aute voluptate voluptate anim irure et Lorem culpa non voluptate. Aliqua ea ullamco nostrud id quis officia in eiusmod eiusmod labore aliqua quis duis ad. Elit et elit sunt exercitation sunt nisi incididunt amet amet. Pariatur nulla eiusmod minim fugiat commodo id enim duis occaecat.\r\n",
+            "votes": 0,
+            "created_at": "2017-10-27T15:11:18.883Z",
+            "image_url": "http://store-nz.monsroyale.com/c.3934103/app-nz/img/no_image_available.jpeg$1resizeid=3&resizeh=1000&resizew=1000"
+          }]
+      </td>
+    </tr>
+    <tr>
+      <td>POST (one post)</td>
+      <td>/posts</td>
+      <td>{
+            "author": "Babe Ruth",
+            "title": "Baseball stuff.",
+            "content": "I used to hit a lot of home runs. What.\r\n",
+            "votes": 0,
+            "image_url": "http://store-nz.monsroyale.com/c.3934103/app-nz/img/no_image_available.jpeg$1resizeid=3&resizeh=1000&resizew=1000"
+          }
+      </td>
+      <td>[... , {
+          "id": 8
+          "author": "Babe Ruth",
+          "title": "Baseball stuff.",
+          "content": "I used to hit a lot of home runs. What.\r\n",
+          "votes": 0,
+          "created_at": "2017-10-27T15:11:18.883Z",
+          "image_url": "http://store-nz.monsroyale.com/c.3934103/app-nz/img/no_image_available.jpeg$1resizeid=3&resizeh=1000&resizew=1000"
+        }]
+      </td>
+    </tr>
+    <tr>
+      <td>PATCH (one post)</td>
+      <td>/posts/8</td>
+      <td>{
+          "content": "I used to hit a lot of home runs. What's it to ya?\r\n",
+        }
+      </td>
+      <td>[... , {
+          "id": 8
+          "author": "Babe Ruth",
+          "title": "Baseball stuff.",
+          "content": "I used to hit a lot of home runs. What's it to ya?\r\n",
+          "votes": 0,
+          "created_at": "2017-10-27T15:11:18.883Z",
+          "image_url": "http://store-nz.monsroyale.com/c.3934103/app-nz/img/no_image_available.jpeg$1resizeid=3&resizeh=1000&resizew=1000"
+        }]
+      </td>
+    </tr>
+    <tr>
+      <td>Delete (one post)</td>
+      <td>/posts/1</td>
+      <td></td>
+      <td>[{
+            "id": 2,
+            "author": "Ellis Daniel",
+            "title": "Quis cillum nisi elit tempor incididunt et deserunt ut eiusmod ullamco sunt consectetur.",
+            "content": "Ullamco eu veniam nostrud id aliquip consequat. Amet ut incididunt nisi ipsum eu esse elit. Consectetur elit qui nostrud pariatur nostrud qui laborum qui ea labore est tempor in.\r\n",
+            "votes": 0,
+            "created_at": "2017-10-27T15:11:18.883Z",
+            "image_url": "http://store-nz.monsroyale.com/c.3934103/app-nz/img/no_image_available.jpeg$1resizeid=3&resizeh=1000&resizew=1000"
+          }, ...]
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2>Comments</h2>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>METHOD</th>
+      <th>URL</th>
+      <th>EXPECTED REQUEST</th>
+      <th>EXPECTED RESPONSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET (all comments)</td>
+      <td>/comments</td>
+      <td></td>
+      <td>[{
+          "id": 1,
+          "content": "Ipsum exercitation sint sunt nisi dolor deserunt enim aliquip fugiat magna velit laborum minim. Sint mollit cillum qui sit eiusmod quis fugiat consectetur esse deserunt anim.",
+          "author": "Carlene Pickett",
+          "post_id": 4
+        }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>GET (one comment)</td>
+      <td>/comments/1</td>
+      <td></td>
+      <td>[{
+            "id": 1,
+            "content": "Ipsum exercitation sint sunt nisi dolor deserunt enim aliquip fugiat magna velit laborum minim. Sint mollit cillum qui sit eiusmod quis fugiat consectetur esse deserunt anim.",
+            "author": "Carlene Pickett",
+            "post_id": 4
+          }]
+      </td>
+    </tr>
+    <tr>
+      <td>POST (one comment)</td>
+      <td>/comments</td>
+      <td>{
+              "content": "Some content worth looking at.",
+              "author": "Lotsa Code",
+              "post_id": 3
+          }
+      </td>
+      <td>[... , {
+              "id": 8,
+              "content": "Some content worth looking at.",
+              "author": "Lotsa Code",
+              "post_id": 3
+          }]
+      </td>
+    </tr>
+    <tr>
+      <td>PATCH (one comment)</td>
+      <td>/comments/8</td>
+      <td>{
+              "content": "Some content worth looking at. Maybe."
+          }
+      </td>
+      <td>[{
+              "id": 8,
+              "content": "Some content worth looking at. Maybe.",
+              "author": "Lotsa Code",
+              "post_id": 3
+          }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>Delete (one comment)</td>
+      <td>/comments/1</td>
+      <td></td>
+      <td>[{
+              "id": 2,
+              "content": "Esse aute ipsum sunt adipisicing cupidatat irure ea laboris nulla cillum qui. In dolore labore irure laborum duis culpa et ipsum ad minim reprehenderit anim elit proident.",
+              "author": "Middleton Nielsen",
+              "post_id": 3
+          }, ...]
+      </td>
+    </tr>
+  </tbody>
+</table>

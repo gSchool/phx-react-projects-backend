@@ -1,0 +1,112 @@
+<h1>React Inbox Routes</h1>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>METHOD</th>
+      <th>URL</th>
+      <th>EXPECTED REQUEST</th>
+      <th>EXPECTED RESPONSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET (all messages)</td>
+      <td>/messages</td>
+      <td></td>
+      <td>[{
+            "id": 1,
+            "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+            "starred": true,
+            "read": false,
+            "labels": [
+                "dev",
+                "personal"
+            ],
+            "body": "DUHHH...",
+            "selected": false
+        }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>GET (one message)</td>
+      <td>/messages/1</td>
+      <td></td>
+      <td>[{
+            "id": 1,
+            "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+            "starred": true,
+            "read": false,
+            "labels": [
+                "dev",
+                "personal"
+            ],
+            "body": "DUHHH...",
+            "selected": false
+        }]
+      </td>
+    </tr>
+    <tr>
+      <td>POST (one message)</td>
+      <td>/messages</td>
+      <td>{
+            "subject": "Clearly everything with an exclamation point is important!",
+            "starred": false,
+            "read": true,
+            "labels": [
+                "dev"
+            ],
+            "body": "UMMMMM...",
+            "selected": false
+        }
+      </td>
+      <td>[... , {
+            "id": 9
+            "subject": "Clearly everything with an exclamation point is important!",
+            "starred": false,
+            "read": true,
+            "labels": [
+                "dev"
+            ],
+            "body": "UMMMMM...",
+            "selected": false
+        }]
+      </td>
+    </tr>
+    <tr>
+      <td>PATCH (one message)</td>
+      <td>/messages/1</td>
+      <td>{
+          "read": true
+        }
+      </td>
+      <td>[{
+            "id": 1,
+            "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+            "starred": true,
+            "read": true,
+            "labels": [
+                "dev",
+                "personal"
+            ],
+            "body": "DUHHH...",
+            "selected": false
+        }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>Delete (one message)</td>
+      <td>/messages/1</td>
+      <td></td>
+      <td>[{
+          "id": 2,
+          "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
+          "starred": false,
+          "read": false,
+          "labels": [],
+          "body": "Call me next time you need help so we can avoid this setback next time ;)",
+          "selected": true
+        }, ...]
+      </td>
+    </tr>
+  </tbody>
+</table>

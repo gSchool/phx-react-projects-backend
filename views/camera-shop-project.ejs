@@ -1,0 +1,81 @@
+<h1>Camera Shop Inventory</h1>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>METHOD</th>
+      <th>URL</th>
+      <th>EXPECTED REQUEST</th>
+      <th>EXPECTED RESPONSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET (all cameras)</td>
+      <td>/cameras</td>
+      <td></td>
+      <td>[{
+          "id": 1,
+          "title": "Emtrak",
+          "author": "Jami Kaufman",
+          "pages": 886
+        }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>GET (one camera)</td>
+      <td>/cameras/:id</td>
+      <td></td>
+      <td>[{
+          "id": 1,
+          "title": "Emtrak",
+          "author": "Jami Kaufman",
+          "pages": 886
+        }]
+      </td>
+    </tr>
+    <tr>
+      <td>POST (one camera)</td>
+      <td>/cameras</td>
+      <td>{
+          "title": "Blogsphere",
+          "author": "Uneida Life",
+          "pages": 25
+        }
+      </td>
+      <td>[... , {
+          "id": 14
+          "title": "Blogsphere",
+          "author": "Uneida Life",
+          "pages": 25
+        }]
+      </td>
+    </tr>
+    <tr>
+      <td>PATCH (one camera)</td>
+      <td>/cameras/:id</td>
+      <td>{
+          "title": "Blogsphere v2"
+        }
+      </td>
+      <td>[... , {
+          "id": 14
+          "title": "Blogsphere v2",
+          "author": "Uneida Life",
+          "pages": 25
+        }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>Delete (one camera)</td>
+      <td>/cameras/:id</td>
+      <td></td>
+      <td>[{
+          "id": 1,
+          "title": "Emtrak",
+          "author": "Jami Kaufman",
+          "pages": 886
+        }, ...]
+      </td>
+    </tr>
+  </tbody>
+</table>

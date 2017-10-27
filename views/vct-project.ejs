@@ -1,0 +1,175 @@
+<h1>Vehicle Comparison Tool Routes</h1>
+<h2>Cars</h2>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>METHOD</th>
+      <th>URL</th>
+      <th>EXPECTED REQUEST</th>
+      <th>EXPECTED RESPONSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET (all cars)</td>
+      <td>/cars</td>
+      <td></td>
+      <td>[{
+            "id": 1,
+            "year": 1995,
+            "make": "Honda",
+            "model": "Civic",
+            "miles": 135000,
+            "price": 3500,
+            "photo_url": "https://dutcheauction.com/images/default-car.png"
+        }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>GET (one car)</td>
+      <td>/cars/1</td>
+      <td></td>
+      <td>[{
+              "id": 1,
+              "year": 1995,
+              "make": "Honda",
+              "model": "Civic",
+              "miles": 135000,
+              "price": 3500,
+              "photo_url": "https://dutcheauction.com/images/default-car.png"
+          }]
+      </td>
+    </tr>
+    <tr>
+      <td>POST (one car)</td>
+      <td>/cars</td>
+      <td>{
+              "year": 2017,
+              "make": "Honda",
+              "model": "Civic",
+              "miles": 0,
+              "price": 18740,
+              "photo_url": "https://dutcheauction.com/images/default-car.png"
+          }
+      </td>
+      <td>[... , {
+              "id": 9,
+              "year": 2017,
+              "make": "Honda",
+              "model": "Civic",
+              "miles": 0,
+              "price": 18740,
+              "photo_url": "https://dutcheauction.com/images/default-car.png"
+          }]
+      </td>
+    </tr>
+    <tr>
+      <td>PATCH (one car)</td>
+      <td>/cars/9</td>
+      <td>{
+            "miles": 5
+          }
+      </td>
+      <td>[... , {
+              "id": 9,
+              "year": 2017,
+              "make": "Honda",
+              "model": "Civic",
+              "miles": 5,
+              "price": 18740,
+              "photo_url": "https://dutcheauction.com/images/default-car.png"
+          }]
+      </td>
+    </tr>
+    <tr>
+      <td>Delete (one car)</td>
+      <td>/cars/1</td>
+      <td></td>
+      <td>[{
+              "id": 2,
+              "year": 2004,
+              "make": "Chrysler",
+              "model": "PT Cruiser",
+              "miles": 155000,
+              "price": 3500,
+              "photo_url": "https://dutcheauction.com/images/default-car.png"
+          }, ...]
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2>Locations</h2>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>METHOD</th>
+      <th>URL</th>
+      <th>EXPECTED REQUEST</th>
+      <th>EXPECTED RESPONSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET (all locations)</td>
+      <td>/locations</td>
+      <td></td>
+      <td>[{
+              "id": 1,
+              "name": "Zenolux Auto",
+              "address": "482 Fayette Street, Magnolia, Mississippi, 9117"
+          }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>GET (one location)</td>
+      <td>/locations/1</td>
+      <td></td>
+      <td>[{
+              "id": 1,
+              "name": "Zenolux Auto",
+              "address": "482 Fayette Street, Magnolia, Mississippi, 9117"
+          }]
+      </td>
+    </tr>
+    <tr>
+      <td>POST (one location)</td>
+      <td>/locations</td>
+      <td>{
+        "name": "Nother Auto Sales Place",
+        "address": "492 E Mirival Way, Detroit, MI 48127"
+    }
+      </td>
+      <td>[... , {
+              "id": 8
+              "name": "Nother Auto Sales Place",
+              "address": "492 E Mirival Way, Detroit, MI 48127"
+          }]
+      </td>
+    </tr>
+    <tr>
+      <td>PATCH (one location)</td>
+      <td>/locations/8</td>
+      <td>{
+              "name": "Nother Auto Sales"
+          }
+      </td>
+      <td>[{
+              "id": 8
+              "name": "Nother Auto Sales",
+              "address": "492 E Mirival Way, Detroit, MI 48127"
+          }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>Delete (one location)</td>
+      <td>/locations/1</td>
+      <td></td>
+      <td>[{
+              "id": 2,
+              "name": "The Zytrex Group",
+              "address": "421 Albemarle Terrace, Biehle, Puerto Rico, 2050"
+          }, ...]
+      </td>
+    </tr>
+  </tbody>
+</table>
