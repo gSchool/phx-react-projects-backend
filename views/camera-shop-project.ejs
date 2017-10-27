@@ -14,55 +14,65 @@
       <td>/cameras</td>
       <td></td>
       <td>[{
-          "id": 1,
-          "title": "Emtrak",
-          "author": "Jami Kaufman",
-          "pages": 886
-        }, ...]
+        "id": 1,
+        "title": "Nikon D3100 DSLR",
+        "image": "http://ecx.images-amazon.com/images/I/713u2gDQqML._SX522_.jpg",
+        "rating": 4,
+        "price": 369.99,
+        "onSale": true
+      }, ...]
       </td>
     </tr>
     <tr>
       <td>GET (one camera)</td>
-      <td>/cameras/:id</td>
+      <td>/cameras/1</td>
       <td></td>
       <td>[{
-          "id": 1,
-          "title": "Emtrak",
-          "author": "Jami Kaufman",
-          "pages": 886
-        }]
+        "id": 1,
+        "title": "Nikon D3100 DSLR",
+        "image": "http://ecx.images-amazon.com/images/I/713u2gDQqML._SX522_.jpg",
+        "rating": 4,
+        "price": 369.99,
+        "onSale": true
+      }]
       </td>
     </tr>
     <tr>
       <td>POST (one camera)</td>
       <td>/cameras</td>
       <td>{
-          "title": "Blogsphere",
-          "author": "Uneida Life",
-          "pages": 25
-        }
+        title: 'Canon EOS 80D',
+        image: 'http://ecx.images-amazon.com/images/I/81U00AkAUWL._SX522_.jpg',
+        rating: 4,
+        price: 3099.0,
+        onSale: true
+      }
       </td>
       <td>[... , {
-          "id": 14
-          "title": "Blogsphere",
-          "author": "Uneida Life",
-          "pages": 25
-        }]
+        "id": 4,
+        "title": "Canon EOS 80D",
+        "image": 'http://ecx.images-amazon.com/images/I/81U00AkAUWL._SX522_.jpg',
+        "rating": 4,
+        "price": 3099.0,
+        "onSale": true
+      }]
       </td>
     </tr>
     <tr>
       <td>PATCH (one camera)</td>
       <td>/cameras/:id</td>
       <td>{
-          "title": "Blogsphere v2"
-        }
+        rating: 3,
+      }
       </td>
       <td>[... , {
-          "id": 14
-          "title": "Blogsphere v2",
-          "author": "Uneida Life",
-          "pages": 25
-        }, ...]
+        "id": 4,
+        "title": "Canon EOS 80D",
+        "image": 'http://ecx.images-amazon.com/images/I/81U00AkAUWL._SX522_.jpg',
+        "rating": 3,
+        "price": 3099.0,
+        "onSale": true
+      }, ...]
       </td>
     </tr>
     <tr>
@@ -70,11 +80,13 @@
       <td>/cameras/:id</td>
       <td></td>
       <td>[{
-          "id": 1,
-          "title": "Emtrak",
-          "author": "Jami Kaufman",
-          "pages": 886
-        }, ...]
+        id: 2,
+        title: 'Canon EOS 70D',
+        image: 'http://ecx.images-amazon.com/images/I/81U00AkAUWL._SX522_.jpg',
+        rating: 2,
+        price: 1099.0,
+        onSale: false
+      }, ...]
       </td>
     </tr>
   </tbody>
