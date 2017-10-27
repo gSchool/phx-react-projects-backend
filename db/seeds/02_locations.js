@@ -14,7 +14,7 @@ exports.seed = function(knex, Promise) {
           "address": "421 Albemarle Terrace, Biehle, Puerto Rico, 2050"
         },
         {
-          "name": "Farmage Tracter Sales",
+          "name": "Farmage Tractor Sales",
           "address": "811 Nova Court, Snyderville, Florida, 6682"
         },
         {
