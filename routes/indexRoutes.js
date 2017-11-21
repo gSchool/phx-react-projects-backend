@@ -24,7 +24,7 @@ router.get('/projects/reddit-clone', function(req, res, next) {
 
 /* GET react-inbox routes page. */
 router.get('/projects/react-inbox', function(req, res, next) {
-  res.render('reddit-clone-project', { title: 'Express' });
+  res.render('inbox-project', { title: 'Express' });
 });
 
 /* GET shopping cart routes page. */
