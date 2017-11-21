@@ -38,6 +38,9 @@ app.use('/messages', require('./routes/messagesRoutes'));
 app.use('/products', require('./routes/productsRoutes'));
 app.use('/items', require('./routes/itemsRoutes'));
 
+// Camera routes
+app.use('/cameras', require('./routes/camerasRoutes.js'));
+
 app.listen(port, function() {
 	console.log("listening on port: ", port);
 })
