@@ -37,4 +37,9 @@ router.get('/projects/camera-shop', function(req, res, next) {
   res.render('camera-shop-project', { title: 'Express' });
 });
 
+/* GET mini-crm routes page. */
+router.get('/projects/mini-crm', function (req, res, next) {
+  res.render('mini-crm-project', { title: 'Express' });
+});
+
 module.exports = router;
