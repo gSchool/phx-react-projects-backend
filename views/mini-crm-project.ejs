@@ -1,0 +1,54 @@
+<h1>Mini CRM</h1>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>METHOD</th>
+      <th>URL</th>
+      <th>EXPECTED REQUEST</th>
+      <th>EXPECTED RESPONSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET (all people)</td>
+      <td>/people</td>
+      <td></td>
+      <td>[{ "id": 1, "fname": "Carpenter", "lname": "Watts", "company": "Enerforce", email: "carpenterwatts@deepends.com", phone: "+1 (958) 590-3988", address: "365 Woodpoint Road, Hayden, New Jersey 35825", photo_url: "http://placehold.it/32x32" }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>GET (one person)</td>
+      <td>/people/1</td>
+      <td></td>
+      <td>[{ "id": 1, "fname": "Carpenter", "lname": "Watts", "company": "Enerforce", email: "carpenterwatts@deepends.com", phone:
+      "+1 (958) 590-3988", address: "365 Woodpoint Road, Hayden, New Jersey 35825", photo_url: "http://placehold.it/32x32" }]
+      </td>
+    </tr>
+    <tr>
+      <td>POST (one person)</td>
+      <td>/people</td>
+      <td>{ "fname": "Mike", "lname": "Matts", "company": "Greenbottle", email: "mmatts@gbottle.com", phone: "+1 (958) 555-5555",
+      address: "1800 E Main St, Atlanta, Georgia 54363", photo_url: "http://placehold.it/32x32" }
+      </td>
+      <td>[... , { "fname": "Mike", "lname": "Matts", "company": "Greenbottle", email: "mmatts@gbottle.com", phone: "+1 (958) 555-5555", address: "1800 E Main St, Atlanta, Georgia 54363", photo_url: "http://placehold.it/32x32" }]
+      </td>
+    </tr>
+    <tr>
+      <td>PATCH (one person)</td>
+      <td>/people/1</td>
+      <td>{ "company": "Ornjoose" }
+      </td>
+      <td>[{ "id": 1, "fname": "Carpenter", "lname": "Watts", "company": "Ornjoose", email: "carpenterwatts@deepends.com", phone:
+      "+1 (958) 590-3988", address: "365 Woodpoint Road, Hayden, New Jersey 35825", photo_url: "http://placehold.it/32x32" }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>Delete (one person)</td>
+      <td>/people/1</td>
+      <td></td>
+      <td>[{ "id": 2, "fname": "Jacqueline", "lname": "Parker", "company": "Collaire", email: "jacquelineparker@collaire.com", phone:
+      "+1 (222) 333-3988", address: "35 Pointer St, Portland, Maine 11111", photo_url: "http://placehold.it/32x32" }, ...]
+      </td>
+    </tr>
+  </tbody>
+</table>
