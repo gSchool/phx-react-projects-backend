@@ -8,4 +8,4 @@ nodemon
 ```
 
 ## Routes
-To see the overview of all of the routes available, run `nodemon` in this folder after installing the dependencies and then navigate to [http://localhost:8000](http://localhost:8000)
+To see the overview of all of the specific routes available for each project, run `nodemon` in this folder after installing the dependencies and then navigate to [http://localhost:8000](http://localhost:8000)
