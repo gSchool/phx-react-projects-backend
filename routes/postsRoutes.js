@@ -4,11 +4,15 @@ var knex = require('../db/knex');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    knex('posts').select().then(posts => res.json(posts))
+  knex('posts').select().then(posts => res.json(posts))
 });
 
 router.get('/:id', function (req, res) {
-    knex('posts').select().where('id', req.params.id).then(posts => res.json(posts))
+  knex('posts').select().where('id', req.params.id).then(posts => res.json(posts))
+});
+
+router.get('/:id/comments', function(req, res) {
+  knex('comments').where('post_id', req.params.id).then(comments => res.json(comments))
 });
 
 router.post('/', function (req, res) {
