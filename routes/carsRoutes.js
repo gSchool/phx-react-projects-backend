@@ -3,12 +3,19 @@ var router = express.Router();
 var knex = require('../db/knex');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  knex('cars').select().then(cars => res.json(cars))
+router.get('/', function(req, res) {
+  knex('cars_locations')
+    .select('cars.id', 'cars.year', 'cars.make', 'cars.model', 'cars.miles', 'cars.price', 'cars.photo_url', 'cars_locations.location_id')
+    .join('cars', 'cars_locations.car_id', 'cars.id')
+    .then(inventory => res.json(inventory))
 });
 
-router.get('/:id', function (req, res) {
-  knex('cars').select().where('id', req.params.id).then(cars => res.json(cars))
+router.get('/:id', function(req, res) {
+  knex('cars_locations')
+    .select('cars.id', 'cars.year', 'cars.make', 'cars.model', 'cars.miles', 'cars.price', 'cars.photo_url', 'cars_locations.location_id')
+    .join('cars', 'cars_locations.car_id', 'cars.id')
+    .where('cars_locations.location_id', req.params.id)
+    .then(inventory => res.json(inventory))
 });
 
 router.post('/', function (req, res) {
