@@ -81,6 +81,36 @@
       </td>
     </tr>
     <tr>
+      <td>PATCH: Increment Vote by One</td>
+      <td>/posts/votes/1/inc</td>
+      <td></td>
+      <td>[{
+            "id": 1,
+            "author": "Molina Fulton",
+            "title": "Deserunt nulla ipsum ea occaecat commodo aliqua nostrud proident pariatur.",
+            "content": "Ut quis proident ipsum ipsum fugiat reprehenderit esse ut. Aliqua est tempor ipsum exercitation quis nostrud sit adipisicing mollit magna duis Lorem. Ut et proident voluptate aute voluptate voluptate anim irure et Lorem culpa non voluptate. Aliqua ea ullamco nostrud id quis officia in eiusmod eiusmod labore aliqua quis duis ad. Elit et elit sunt exercitation sunt nisi incididunt amet amet. Pariatur nulla eiusmod minim fugiat commodo id enim duis occaecat.\r\n",
+            "votes": 1,
+            "created_at": "2017-10-27T15:11:18.883Z",
+            "image_url": "http://store-nz.monsroyale.com/c.3934103/app-nz/img/no_image_available.jpeg$1resizeid=3&resizeh=1000&resizew=1000"
+        }, ...]
+      </td>
+    </tr>
+    <tr>
+      <td>PATCH: Decrement Vote by One</td>
+      <td>/posts/votes/1/dec</td>
+      <td></td>
+      <td>[{
+            "id": 1,
+            "author": "Molina Fulton",
+            "title": "Deserunt nulla ipsum ea occaecat commodo aliqua nostrud proident pariatur.",
+            "content": "Ut quis proident ipsum ipsum fugiat reprehenderit esse ut. Aliqua est tempor ipsum exercitation quis nostrud sit adipisicing mollit magna duis Lorem. Ut et proident voluptate aute voluptate voluptate anim irure et Lorem culpa non voluptate. Aliqua ea ullamco nostrud id quis officia in eiusmod eiusmod labore aliqua quis duis ad. Elit et elit sunt exercitation sunt nisi incididunt amet amet. Pariatur nulla eiusmod minim fugiat commodo id enim duis occaecat.\r\n",
+            "votes": 2, (ASSUME THERE WAS PREVIOUSLY 3 VOTES)
+            "created_at": "2017-10-27T15:11:18.883Z",
+            "image_url": "http://store-nz.monsroyale.com/c.3934103/app-nz/img/no_image_available.jpeg$1resizeid=3&resizeh=1000&resizew=1000"
+        }, ...]
+      </td>
+    </tr>
+    <tr>
       <td>Delete (one post)</td>
       <td>/posts/1</td>
       <td></td>
