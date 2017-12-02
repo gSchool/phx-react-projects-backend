@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
     table.integer('rating');
     table.float('price');
     table.boolean('on_sale').defaultsTo(false);
+    table.boolean('in_cart').defaultsTo(false);
   });
 };
 

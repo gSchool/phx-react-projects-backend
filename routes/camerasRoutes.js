@@ -12,19 +12,19 @@ router.get('/:id', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-  knex('cameras').insert(req.body).then(() => {
-    knex('cameras').select().then(cameras => res.json(cameras))
-  });
+  knex('cameras').returning('*').insert(req.body).then((camera) => res.json(camera));
 });
 
-router.patch('/:id', function(req, res) {
-  knex('cameras').update(req.body).where('id', req.params.id).then(function() {
-    knex('cameras').select().then(cameras => res.json(cameras))
-  });
+router.patch('/cart/:id/add', function(req, res) {
+  knex('cameras').returning('*').update({in_cart: true}).where('id', req.params.id).then(camera => res.json(camera));
+});
+
+router.patch('/cart/:id/remove', function(req, res) {
+  knex('cameras').returning('*').update({in_cart: false}).where('id', req.params.id).then(camera => res.json(camera));
 });
 
 router.delete('/:id', function(req, res) {
-  knex('cameras').del().where('id', req.params.id).then(function() {
+  knex('cameras').del().where('id', req.params.id).then(() => {
     knex('cameras').select().then(cameras => res.json(cameras))
   });
 });
