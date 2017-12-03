@@ -1,7 +1,9 @@
+let connectionString = process.platform === 'win32' ? 'postgres://postgres:root@localhost/q3backend' : 'postgres://localhost/q3backend'
+
 module.exports = {
   development: {
       client: 'pg',
-      connection: 'postgres://postgres:root@localhost/q3backend',
+      connection: connectionString,
       migrations: {
           directory: __dirname + '/db/migrations',
         },
