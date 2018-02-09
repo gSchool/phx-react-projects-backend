@@ -6,6 +6,16 @@ router.get('/', function (req, res, next) {
   knex('people').select().then(people => res.json(people))
 });
 
+router.get('/:id', function (req, res) {
+  knex('people').select().where('id', req.params.id).then(person => res.json(person))
+});
+
+router.post('/', function (req, res) {
+  knex('people').insert(req.body).then(() => {
+    knex('people').select().then(people => res.json(people))
+  });
+});
+
 router.post('/login', function (req, res, next) {
   knex('people')
     .where('email', req.body.email)
@@ -17,16 +27,6 @@ router.post('/login', function (req, res, next) {
         res.json(person[0])
       }
     })
-});
-
-router.get('/:id', function (req, res) {
-  knex('people').select().where('id', req.params.id).then(person => res.json(person))
-});
-
-router.post('/', function (req, res) {
-  knex('people').insert(req.body).then(() => {
-    knex('people').select().then(people => res.json(people))
-  });
 });
 
 router.patch('/:id', function (req, res) {
