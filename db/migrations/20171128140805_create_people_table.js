@@ -8,7 +8,7 @@ exports.up = function(knex, Promise) {
     table.string('phone')
     table.string('address')
     table.string('photo_url')
-    
+    table.string('password')
   });
 };
 

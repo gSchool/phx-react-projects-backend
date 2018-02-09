@@ -10,7 +10,8 @@ exports.seed = function (knex, Promise) {
           "email": "carpenterwatts@enerforce.com",
           "company": "Enerforce",
           "address": "365 Woodpoint Road, Hayden, New Jersey 35825",
-          "photo_url": "http://placehold.it/100x100"
+          "photo_url": "http://placehold.it/100x100",
+          "password": "hello"
         },
         {
           "fname": "Jacqueline",
@@ -19,7 +20,8 @@ exports.seed = function (knex, Promise) {
           "email": "jacquelineparker@collaire.com",
           "company": "Collaire",
           "address": "698 Jardine Place, Waverly, Alaska 12490",
-          "photo_url": "http://placehold.it/100x100"
+          "photo_url": "http://placehold.it/100x100",
+          "password": "hello"
         },
         {
           "fname": "Estella",
@@ -28,7 +30,8 @@ exports.seed = function (knex, Promise) {
           "email": "estellarowe@softmicro.com",
           "company": "Softmicro",
           "address": "939 Jerome Avenue, Mansfield, Wisconsin 57757",
-          "photo_url": "http://placehold.it/100x100"
+          "photo_url": "http://placehold.it/100x100",
+          "password": "hello"
         },
         {
           "fname": "Snyder",
@@ -37,7 +40,8 @@ exports.seed = function (knex, Promise) {
           "email": "snyderbattle@neteria.com",
           "company": "Neteria",
           "address": "510 Frost Street, Ivanhoe, Arizona 84692",
-          "photo_url": "http://placehold.it/100x100"
+          "photo_url": "http://placehold.it/100x100",
+          "password": "hello"
         },
         {
           "fname": "Ellis",
@@ -46,7 +50,8 @@ exports.seed = function (knex, Promise) {
           "email": "ellisblake@quilm.com",
           "company": "Quilm",
           "address": "106 Schroeders Avenue, Holcombe, Ohio 68090",
-          "photo_url": "http://placehold.it/100x100"
+          "photo_url": "http://placehold.it/100x100",
+          "password": "hello"
         },
         {
           "fname": "Mcbride",
@@ -55,7 +60,8 @@ exports.seed = function (knex, Promise) {
           "email": "mcbridehodges@qnekt.com",
           "company": "Qnekt",
           "address": "967 Lacon Court, Heil, Puerto Rico 53116",
-          "photo_url": "http://placehold.it/100x100"
+          "photo_url": "http://placehold.it/100x100",
+          "password": "hello"
         },
         {
           "fname": "Delores",
@@ -64,7 +70,8 @@ exports.seed = function (knex, Promise) {
           "email": "delorescline@krog.com",
           "company": "Krog",
           "address": "115 Bennet Court, Ilchester, Arkansas 40340",
-          "photo_url": "http://placehold.it/100x100"
+          "photo_url": "http://placehold.it/100x100",
+          "password": "hello"
         },
         {
           "fname": "Battle",
@@ -73,7 +80,8 @@ exports.seed = function (knex, Promise) {
           "email": "battlerojas@atomica.com",
           "company": "Atomica",
           "address": "161 Midwood Street, Interlochen, Hawaii 60016",
-          "photo_url": "http://placehold.it/100x100"
+          "photo_url": "http://placehold.it/100x100",
+          "password": "hello"
         },
         {
           "fname": "Mitchell",
@@ -82,7 +90,8 @@ exports.seed = function (knex, Promise) {
           "email": "mitchellshaw@zoarere.com",
           "company": "Zoarere",
           "address": "534 Seton Place, Crucible, Palau 41488",
-          "photo_url": "http://placehold.it/100x100"
+          "photo_url": "http://placehold.it/100x100",
+          "password": "hello"
         },
         {
           "fname": "Blackburn",
@@ -91,7 +100,8 @@ exports.seed = function (knex, Promise) {
           "email": "blackburnmays@cowtown.com",
           "company": "Cowtown",
           "address": "439 Brown Street, Chloride, Louisiana 22881",
-          "photo_url": "http://placehold.it/100x100"
+          "photo_url": "http://placehold.it/100x100",
+          "password": "hello"
         }
       ]);
     });
